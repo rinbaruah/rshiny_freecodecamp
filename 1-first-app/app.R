@@ -22,7 +22,7 @@ library(shinythemes)
       "My first app",
       tabPanel("Navbar 1",
                sidebarPanel(
-                 tags$h3("Input:"),
+                 tags$h3("Personal details:"),
                  textInput("txt1", "Given Name:", ""),
                  textInput("txt2", "Surname:", ""),
                  
@@ -36,7 +36,12 @@ library(shinythemes)
                ) # mainPanel
                
       ), # Navbar 1, tabPanel
-      tabPanel("Navbar 2", "This panel is intentionally left blank"),
+      tabPanel("Navbar 2",
+               sidebarPanel(
+                 tags$h3("School details:"),
+                 textInput("txt3","School name:",""),
+                 textInput("txt4","School location:","")
+               )),
       tabPanel("Navbar 3", "This panel is intentionally left blank")
   
     ) # navbarPage
